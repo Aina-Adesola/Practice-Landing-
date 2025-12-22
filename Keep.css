@@ -1,0 +1,256 @@
+/* ------------------------ */
+/* GENERAL PAGE BACKGROUND  */
+/* ------------------------ */
+
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    min-height: 100vh;
+    background-image: url('Background Image.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+/* Mobile fix */
+@media (hover: none) and (pointer: coarse) {
+    body { background-attachment: scroll; }
+}
+
+
+
+
+
+/* ------------------------ */
+/* TOP PURPLE HEADER BAR    */
+/* ------------------------ */
+
+.top-bar {
+    background: #5a4df1;
+    color: white;
+    padding: 8px 120px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.top-bar .contact span {
+    margin-right: 45px;
+}
+
+.top-bar .socials span {
+    margin-left: 18px;
+}
+
+
+
+/* ------------------------ */
+/* MAIN NAVIGATION BAR      */
+/* ------------------------ */
+
+.main-nav {
+    width: 90%;
+    max-width: 1100px;
+    background: white;
+    margin: 0px auto;
+    padding: 10px 25px;
+    border-radius: 10px;
+    position: fixed;
+  top: 40px;   /* so it sits below your purple top-bar */
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 1100px;
+  z-index: 200;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 95px;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0;
+    margin: 0;
+}
+
+.main-nav ul li {
+    display: flex;
+    align-items: center;
+}
+
+
+
+/* ------------------------ */
+/* APPOLLY LOGO BOX         */
+/* ------------------------ */
+
+.logo-wrapper {
+    
+    display: flex;
+    justify-content: center;
+}
+
+.logo-box {
+    background: white;
+    padding: 15px 8px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
+    margin: -20px 0; /* raise logo box */
+    
+}
+
+.logo {
+    margin: 0;
+    font-size: 22px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+
+
+/* ------------------------ */
+/* NAVIGATION LINKS         */
+/* ------------------------ */
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    padding: 6px 12px;
+    color: #000;
+    font-size: 15px;
+}
+
+.main-nav a:hover {
+    color: #4d3df7;
+}
+
+.hm {
+    color: #4d3df7;
+    text-decoration: underline;
+}
+
+
+
+/* ------------------------ */
+/* DOWNLOAD BUTTON          */
+/* ------------------------ */
+
+.dw {
+    background: #4d3df7;
+    color: white !important;
+    padding: 10px 20px;
+    border-radius: 8px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ------------------------ */
+/*Hero page*/
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 60px 120px;
+  min-height: 100vh;
+  position: relative;
+  margin-top: -40px;
+}
+
+/* Left Box */
+.hero-left {
+  background: #fff;
+  padding: 50px 40px;
+  border-radius: 12px;
+  max-width: 480px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+
+.hero-left h1 {
+  font-size: 40px;
+  color: #4b43d0;
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero-left p {
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 35px;
+}
+
+.hero-left h3 {
+  font-size: 16px;
+  margin-bottom: 15px;
+  letter-spacing: 1px;
+}
+
+/* Download buttons */
+.download-buttons img {
+  width: 160px;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+/* Right phone */
+.hero-right .phone {
+  width: 340px;
+  filter: drop-shadow(0 15px 40px rgba(0, 0, 0, 0.25));
+}
+
+/* Decorative background shapes */
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 80px;
+  left: 50px;
+  width: 500px;
+  height: 350px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-radius: 20px;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  bottom: 60px;
+  right: 100px;
+  width: 400px;
+  height: 250px;
+  background: rgba(255,255,255,0.1);
+  border-radius: 30px;
+  transform: rotate(-8deg);
+}
+
+.top-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 300;
+}
+.hero {
+  margin-top: 180px; /* adjust until it matches your Figma layout */
+}
+

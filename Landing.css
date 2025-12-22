@@ -1,0 +1,951 @@
+/* ------------------------ */
+/* RESET + GLOBAL */
+/* ------------------------ */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-image: url("Background Image.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x: hidden;
+}
+
+
+/* ------------------------ */
+/* TOP HEADER (TRANSPARENT) */
+/* ------------------------ */
+.top-bar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 120px;
+
+    background: transparent; /* FIXED */
+    color: white;
+
+    display: flex;
+    justify-content: space-between;
+    z-index: 500;
+}
+
+.top-bar span {
+    margin-right: 15px;
+}
+
+
+/* ------------------------ */
+/* MAIN NAV (WHITE BAR) */
+/* ------------------------ */
+.main-nav {
+    position: fixed;
+    top: 50px; /* sits under top-bar */
+    left: 50%;
+    transform: translateX(-50%);
+    width: 80%;
+    max-width: 1150px;
+
+    background: #fff;
+    padding: 14px 40px;
+    border-radius: 14px;
+    box-shadow: 0 5px 25px rgba(0,0,0,0.15);
+
+    z-index: 400;
+
+    display: flex;
+    justify-content: center;
+}
+
+.main-nav ul {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    list-style: none;
+}
+
+.main-nav a {
+    text-decoration: none;
+    font-weight: 600;
+    color: #111;
+    font-size: 15px;
+}
+
+
+/* CENTER LOGO */
+.logo-wrapper {
+    margin: 0 35px;
+}
+
+.logo-box {
+    background: #fff;
+    padding: 12px 25px;
+    border-radius: 14px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.18);
+}
+
+.logo {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+
+/* DOWNLOAD BUTTON */
+.dw {
+    background: #4d3df7 !important;
+    color: #fff !important;
+    padding: 10px 22px;
+    border-radius: 8px;
+}
+
+
+/* ------------------------ */
+/* HERO SECTION */
+/* ------------------------ */
+/* ------------------------ */
+/* HERO SECTION */
+/* ------------------------ */
+.hero {
+    position: relative;
+
+    padding: 0 120px;
+    margin-top: 240px; /* leaves space for fixed headers */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 90vh;
+}
+
+/* ------------------------ */
+/* PERFECT DOUBLE BORDER FRAME (MATCH FIGMA) */
+/* ------------------------ */
+
+.hero-frame-outer {
+    position: absolute;
+    top: 40;
+    left: 40px;
+    margin-left: 130px;
+
+    width: 570px;
+    height: 535px;
+
+    border: 18px solid; color: #7572FF;
+    border-radius: 0px;
+
+    z-index: 1;
+}
+
+
+
+/* ------------------------ */
+/* LEFT CONTENT BOX */
+/* ------------------------ */
+.hero-left {
+    background: #fff;
+    padding: 55px 48px;
+    border-radius: 0px;
+    width: 570px;
+    height: 432px;
+
+    box-shadow: 0 15px 35px rgba(0,0,0,0.17);
+    position: relative;
+    z-index: 10; /* ABOVE the frame */
+}
+
+
+
+/* Download buttons */
+.download-buttons img {
+    width: 150px;
+    margin-right: 10px;
+    cursor: pointer;
+}
+
+
+/* ------------------------ */
+/* PHONE IMAGE (RIGHT SIDE) */
+/* ------------------------ */
+.hero-right img {
+    width: 390px;
+    filter: drop-shadow(0 18px 40px rgba(0,0,0,0.25));
+}
+
+.hero-left h1 {
+    font-size: 47.83px;
+    color: royalblue;
+}
+
+
+
+
+
+
+
+
+/* ----------------------------- */
+/* ABOUT PAGE UNDER HERO SECTION */
+/* ----------------------------- */
+.about-section {
+    padding: 80px 0;
+    width: 100%;
+    background-color: white;
+}
+
+.about-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 60px auto;
+}
+
+.about-header h2 {
+    font-size: 34px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.about-header p {
+    line-height: 1.7;
+    color: #666;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 70px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-image img {
+    width: 380px;
+}
+
+.about-features {
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    max-width: 500px;
+}
+
+.feature-card {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.07);
+}
+
+.feature-card h3 {
+    margin: 0 0 8px 0;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.feature-card p {
+    margin: 0;
+    color: #666;
+    line-height: 1.6;
+}
+
+.icon {
+    width: 40px;
+    height: 40px;
+    background: #4b58e3;
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+
+
+/* ----------------------------- */
+/* APP FEATURES UNDER ABOUT----- */
+/* ----------------------------- */
+.features-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.section-title {
+    color: white;
+    margin-bottom: 20px;
+}
+
+.section-title h2 {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+.section-title p {
+    font-size: 16px;
+    line-height: 1.5;
+    color: white;
+    padding-bottom: 20px;
+
+    
+}
+
+/* MAIN GRID LAYOUT */
+.features-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-areas:
+        "top top top"
+        "left phone right"
+        "left phone right"
+        "bottom bottom bottom";
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+/* PHONE IMAGE */
+.phone-wrapper {
+    grid-area: phone;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.phone-wrapper img {
+    width: 260px;
+    max-width: 100%;
+}
+
+/* FEATURE BOXES */
+.feature-item {
+    padding: 18px 25px;
+    border-radius: 12px;
+    /*box-shadow: 0 4px 12px rgba(0,0,0,0.1);*/
+    width: 100%;
+    max-width: 260px;
+    margin: auto;
+}
+
+.feature-item h3 {
+    font-size: 18px;
+    margin: 0 0 8px;
+    color: white;
+}
+
+.feature-item p {
+    font-size: 14px;
+    color: white;
+    margin: 0;
+}
+
+/* GRID POSITIONS */
+.top { grid-area: top; max-width: 350px; }
+.bottom { grid-area: bottom; max-width: 350px; }
+
+.left { justify-self: end; }
+.right { justify-self: start; }
+
+/* RESPONSIVE */
+@media (max-width: 900px) {
+    .features-container {
+        grid-template-areas:
+            "top"
+            "phone"
+            "left"
+            "right"
+            "bottom";
+        grid-template-columns: 1fr;
+    }
+
+    .left, .right {
+        justify-self: center;
+    }
+
+    .feature-item {
+        max-width: 300px;
+    }
+}
+
+
+
+
+
+/* ---------------------------------- */
+/* APP INTERFACE UNDER FEATURES----- */
+/* -------------------------------- */
+.diva{
+    background-color: white;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.diva h2{
+    padding-top: 40px;
+}
+.interface-section {
+    background-color: white;
+    display: flex;
+    justify-content: center; /* horizontal alignment */
+    align-items: center;
+    height: 622px;
+}
+
+/* SLIDER---------------------------- */
+.divaimg {
+    background-color: white;
+    display: flex;
+    justify-content: center; /* horizontal alignment */
+    align-items: center;  
+}
+
+
+
+
+
+/* ---------------------------------- */
+/* DOWNLOAD NOW--------------------- */
+/* -------------------------------- */
+.download-section {
+    background-color: white;
+  padding: 60px 0;
+}
+
+.download-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 40px;
+}
+
+.download-left {
+  width: 50%;
+}
+
+.download-left h2 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.download-left p {
+  font-size: 15px;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.store-buttons {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.store-buttons img {
+  height: 45px;
+  cursor: pointer;
+}
+
+/* BLUE BOXES */
+.stats-row {
+  display: flex;
+  gap: 20px;
+}
+
+.stat-box {
+  width: 170px;
+  height: 176px;
+  text-align: center;
+  padding: 20px 10px;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.stat-box .icon {
+  font-size: 22px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.stat-box h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.stat-box p {
+  font-size: 12px;
+  opacity: 0.9;
+}
+
+/* RIGHT SIDE PHONE */
+.download-right {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+
+.phone-img {
+  width: 320px;
+  transform: rotate(-18deg);
+  margin-left: -330px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* -------------------------
+   SECTION 1 - HOW TO USE
+-------------------------- */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.how-to-use {
+    background: #5b42ff;
+    padding: 80px 0 150px;
+    text-align: center;
+    position: relative;
+    color: white;
+}
+
+.how-content h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.how-content p {
+    max-width: 650px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* IMAGE OVERLAP EFFECT */
+.how-image-container {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -120px;      /* controls overlap distance */
+}
+
+.how-image {
+    width: 650px;
+    border-radius: 10px;
+    
+}
+
+
+
+/* -------------------------
+   SECTION 2 - TEAM SECTION
+-------------------------- */
+
+.team-section {
+    background-color: white;
+    padding: 180px 0 100px;
+    text-align: center;
+}
+
+.team-section h2 {
+    font-size: 26px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.team-section p {
+    max-width: 600px;
+    margin: auto;
+    font-size: 14px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.team-row {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.team-card {
+    width: 300px;
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0px 10px 30px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+.team-photo img {
+    width: 130px;
+    height: 130px;
+    border-radius: 50%;
+    border: 6px solid #4169e1;
+    padding: 5px;
+}
+
+.team-card h3 {
+    margin-top: 15px;
+    font-size: 18px;
+}
+
+.role {
+    font-size: 13px;
+    color: #777;
+    margin-bottom: 10px;
+}
+
+.desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+.social-icons i {
+    padding: 8px;
+    margin: 0 5px;
+    font-size: 16px;
+    color: #444;
+    cursor: pointer;
+}
+
+.social-icons i:hover {
+    color: #4169e1;
+}
+
+
+
+
+
+
+/* ------------------------
+SECTION 3 - HAPPY CUSTOMERS 
+--------------------------*/
+.happy-customers {
+    width: 100%;
+    padding: 90px 20px;
+    text-align: center;
+}
+
+.hc-header {
+    max-width: 750px;
+    margin: 0 auto 50px;
+    color: white;
+}
+
+.hc-header h2 {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+
+.hc-header p {
+    color: white;
+    line-height: 1.7;
+    font-size: 15px;
+}
+
+/* IMAGE CENTERED */
+.hc-image img {
+    width: 680px;
+    max-width: 100%;
+    display: block;
+    margin: 0 auto 30px;
+}
+
+/* DOTS (Not slider) */
+.hc-dots {
+    margin-top: 10px;
+}
+
+.hc-dots .dot {
+    width: 12px;
+    height: 12px;
+    background: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    margin: 0 6px;
+}
+
+.hc-dots .dot.active {
+    background: white; /* purple active dot */
+}
+
+
+
+
+
+
+
+/* BLOG SECTION */
+
+.blog-section {
+  width: 90%;
+  max-width: 1200px;
+  margin: 60px auto;
+  text-align: center;
+}
+
+.blog-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-subtitle {
+  max-width: 600px;
+  margin: 0 auto 40px auto;
+  font-size: 14px;
+  line-height: 1.6;
+  color: #555;
+}
+
+/* Cards layout */
+.blog-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 25px;
+}
+
+.blog-card {
+  width: 32%;
+  background: #fff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.07);
+  transition: 0.3s ease;
+}
+
+.blog-card:hover {
+  transform: translateY(-5px);
+}
+
+.blog-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+}
+
+.blog-content {
+  padding: 18px 20px;
+  text-align: left;
+}
+
+.blog-content h3 {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.blog-content p {
+  font-size: 13px;
+  line-height: 1.6;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.blog-content a {
+  font-size: 13px;
+  color: #3f51ff;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+
+
+
+
+
+
+
+
+/* CONTACT BAR */
+/* -------------------------------------- */
+/* CONTACT BAR (OVERLAPPING WHITE + FOOTER) */
+/* -------------------------------------- */
+
+.contact-bar {
+    width: 85%;
+    max-width: 1100px;
+    background: white;
+    padding: 35px 50px;
+    border-radius: 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 40px;
+
+    margin: auto;
+    margin-top: 70px;
+
+    /* THIS MAKES IT OVERLAP THE FOOTER */
+    position: relative;
+    top: 60px; /* push down into footer */
+    z-index: 10;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.icon-circle {
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    background: #6959ff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-circle img {
+    width: 26px;
+}
+
+.divider {
+    width: 2px;
+    height: 50px;
+    background: #dcdcdc;
+    opacity: 0.7;
+}
+
+/* -------------------------------------- */
+/* FOOTER */
+/* -------------------------------------- */
+
+.footer {
+    background: #0c0c22;
+    color: #ffffff;
+    padding: 120px 0 60px; /* extra top padding to allow overlap */
+    position: relative;
+}
+
+.footer-container {
+    width: 85%;
+    max-width: 1200px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+}
+
+.footer-column h3 {
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.footer-column p {
+    margin-bottom: 10px;
+    font-size: 14px;
+    opacity: 0.85;
+}
+
+/* Social icons */
+.footer-socials img {
+    width: 20px;
+    margin-right: 12px;
+}
+
+/* Newsletter */
+.newsletter-box {
+    margin-top: 15px;
+    display: flex;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsletter-box input {
+    padding: 10px;
+    border: none;
+    width: 200px;
+    outline: none;
+}
+
+.newsletter-box button {
+    width: 45px;
+    background: #6959ff;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+}
+
+footer .copyright {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+
+
+
+
+
+.footer-social {
+    display: flex;
+    gap: 18px;
+    margin-top: 20px;
+}
+
+.footer-social a {
+    color: #ffffff;          /* white icons */
+    font-size: 18px;
+    transition: 0.3s ease;
+}
+
+.footer-social a:hover {
+    color: #7a95ff;          /* light blue hover */
+}
+
+
+
+.footer-social a {
+    position: relative;      /* required for the divider */
+    padding-right: 15px;     /* space after icon */
+}
+
+.footer-social a:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    right: -5px;             /* positions divider */
+    top: 50%;
+    transform: translateY(-50%);
+    width: 2px;
+    height: 18px;            /* divider height */
+    background: rgba(255,255,255,0.5); /* white with transparency */
+}
